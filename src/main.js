@@ -22,8 +22,10 @@ import Argon from "./plugins/argon-kit";
 import './registerServiceWorker'
 
 Vue.config.productionTip = false;
+// 一个插件可以是一个拥有 install() 方法的对象，也可以直接是一个安装函数本身。
 Vue.use(Argon);
 new Vue({
   router,
   render: h => h(App)
-}).$mount("#app");
+})  // 将应用实例挂载在一个容器元素中。
+    .$mount("#app");
